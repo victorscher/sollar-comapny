@@ -1,0 +1,12 @@
+@mixin centralize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin background-center {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

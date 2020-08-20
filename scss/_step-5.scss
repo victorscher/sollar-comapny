@@ -1,0 +1,121 @@
+.step-5 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  .bg-image {
+    height: 20vh;
+    width: 100%;
+    background-image: url('../assets/step-5-bg-image-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg-gradient {
+    height: 80vh;
+    width: 100%;
+    background-image: url('../assets/step-5-bg-gradient-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 9vw;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-top: 2vh;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      font-size: 5vw;
+      font-weight: 500;
+      margin-top: 2vh;
+    }
+
+    .select {
+      margin-top: 5vh;
+      width: 50vw;
+      height: 6vh;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      display: flex;
+      align-items: center;
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        width: 62vw;
+        border: none;
+      }
+
+      select {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding-left: 13vw;
+        font-size: 5vw;
+      }
+
+      .arrow {
+        width: 3vw;
+        height: 3vw;
+        background-image: url('../assets/arrow.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: repeat;
+        position: absolute;
+        right: 5vw;
+      }
+    }
+
+    p {
+      color: white;
+      width: 80%;
+      text-align: center;
+      margin-top: 5vh;
+      font-size: 5vw;
+    }
+
+    a {
+      width: 65vw;
+      height: 8vh;
+      text-transform: uppercase;
+      color: #da7d21;
+      border: none;
+      font-size: 4.5vw;
+      -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+      border-radius: 50px;
+      margin-top: 4vh;
+      background-color: white;
+      text-align: center;
+      line-height: 8vh;
+
+      .whatsapp-icon {
+        display: inline-block;
+        background-image: url('../assets/whatsapp.png');
+        width: 5vw;
+        height: 5vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 1vw;
+      }
+    }
+  }
+}

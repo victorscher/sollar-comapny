@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir Next';
+}
+
+@import 'mixins';
+@import 'main';
+@import 'step-1';
+@import 'step-2';
+@import 'step-3';
+@import 'step-4';
+@import 'step-5';

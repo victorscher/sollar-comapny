@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Next";
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.main header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  z-index: 2;
+}
+.main header .logo {
+  width: 35vw;
+  height: 20vh;
+  margin-left: 5vw;
+  background-image: url("../assets/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main header .menu {
+  height: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 7vw;
+}
+.main header .menu div {
+  width: 10vw;
+  height: 3px;
+  background-color: white;
+}
+
+.step-1 {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step-1 video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.step-1 div {
+  width: 100%;
+  height: max-content;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step-1 div h1 {
+  text-align: center;
+  color: white;
+  font-family: "Avenir Next";
+  font-weight: 400;
+  line-height: 5vh;
+}
+.step-1 div h2 {
+  text-align: center;
+  color: white;
+  font-family: "Avenir Next";
+  font-weight: 900;
+  font-size: 9vw;
+  text-transform: uppercase;
+  margin-top: 3vh;
+}
+
+.step-2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.step-2 .bg-image {
+  height: 20vh;
+  width: 100%;
+  background-image: url("../assets/step-2-bg-image-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.step-2 .bg-gradient {
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(to top, #314d8b 0%, #30cfd0 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step-2 .bg-gradient h2 {
+  font-size: 9vw;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Avenir Next";
+  font-weight: 900;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+.step-2 .bg-gradient .slider {
+  width: 100%;
+  height: 52vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.step-2 .bg-gradient .slider .card {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Avenir Next";
+  font-weight: 400;
+  color: #31518d;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.step-2 .bg-gradient .slider .card .card-icon {
+  width: 25vw;
+  height: 10vh;
+  margin-top: 5vh;
+}
+.step-2 .bg-gradient .slider .card h3 {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2vh;
+}
+.step-2 .bg-gradient .slider .card p {
+  text-align: center;
+  margin-top: 2vh;
+  width: 80%;
+  font-size: 3.5vw;
+}
+.step-2 .bg-gradient .slider div:nth-child(1) .card-icon {
+  background-image: url("../assets/card-icon-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.step-2 .bg-gradient .slider div:nth-child(2) .card-icon {
+  background-image: url("../assets/card-icon-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.step-2 .bg-gradient .slider div:nth-child(3) .card-icon {
+  background-image: url("../assets/card-icon-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.step-2 .bg-gradient .slider div:nth-child(4) .card-icon {
+  background-image: url("../assets/card-icon-4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.step-3 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.step-3 .bg-image {
+  height: 20vh;
+  width: 100%;
+  background-image: url("../assets/step-3-bg-image-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.step-3 .bg-gradient {
+  height: 80vh;
+  width: 100%;
+  background-color: #4aac40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step-3 .bg-gradient .animation-box {
+  width: max-content;
+  height: max-content;
+  position: relative;
+  margin-top: 3vh;
+}
+.step-3 .bg-gradient .animation-box .hose-1 {
+  width: 30vw;
+  height: 8vh;
+  background-image: url("../assets/hose-mob-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -4vh;
+  right: 8vw;
+}
+.step-3 .bg-gradient .animation-box .hose-2 {
+  width: 25vw;
+  height: 8vh;
+  background-image: url("../assets/hose-mob-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 8vh;
+  left: -15vw;
+}
+.step-3 .bg-gradient .animation-box .hose-3 {
+  width: 20vw;
+  height: 8vh;
+  background-image: url("../assets/hose-mob-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 7vh;
+  right: -15vw;
+}
+.step-3 .bg-gradient h2 {
+  font-size: 9vw;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Avenir Next";
+  font-weight: 900;
+  margin-top: 2vh;
+}
+.step-3 .bg-gradient .slider {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 3vh;
+}
+.step-3 .bg-gradient .slider .card {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Avenir Next";
+  font-weight: 400;
+  color: #4aac40;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.step-3 .bg-gradient .slider .card .card-number {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  top: -3.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.step-3 .bg-gradient .slider .card .card-number p {
+  margin-top: 0;
+  font-size: 4vw;
+  font-weight: 600;
+}
+.step-3 .bg-gradient .slider .card h3 {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 3vh;
+  font-size: 5vw;
+}
+.step-3 .bg-gradient .slider .card p {
+  text-align: center;
+  margin-top: 1vh;
+  width: 80%;
+  font-size: 3.5vw;
+}
+
+.step-4 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.step-4 .bg-image {
+  height: 20vh;
+  width: 100%;
+  background-image: url("../assets/step-4-bg-image-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.step-4 .bg-gradient {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../assets/step-4-bg-gradient-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step-4 .bg-gradient h2 {
+  font-size: 9vw;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Avenir Next";
+  font-weight: 900;
+  margin-top: 2vh;
+}
+.step-4 .bg-gradient .slider {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 3vh;
+}
+.step-4 .bg-gradient .slider .card {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Avenir Next";
+  font-weight: 400;
+  color: black;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.step-4 .bg-gradient .slider .card .card-brand {
+  width: 80%;
+  height: 60%;
+  margin-top: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.step-4 .bg-gradient .slider .card P {
+  font-size: 5vw;
+  font-weight: 500;
+}
+.step-4 .bg-gradient .slider .card:nth-child(1) .card-brand {
+  background-image: url("../assets/large_collegebound.png");
+}
+.step-4 .bg-gradient .slider .card:nth-child(2) .card-brand {
+  background-image: url("../assets/large_frack.png");
+}
+.step-4 .bg-gradient .slider .card:nth-child(3) .card-brand {
+  background-image: url("../assets/large_liquidpipeline_0.png");
+}
+
+.step-5 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.step-5 .bg-image {
+  height: 20vh;
+  width: 100%;
+  background-image: url("../assets/step-5-bg-image-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.step-5 .bg-gradient {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../assets/step-5-bg-gradient-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step-5 .bg-gradient h2 {
+  font-size: 9vw;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 2vh;
+}
+.step-5 .bg-gradient h3 {
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 500;
+  margin-top: 2vh;
+}
+.step-5 .bg-gradient .select {
+  margin-top: 5vh;
+  width: 50vw;
+  height: 6vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+}
+.step-5 .bg-gradient .select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  width: 62vw;
+  border: none;
+}
+.step-5 .bg-gradient .select select {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-left: 13vw;
+  font-size: 5vw;
+}
+.step-5 .bg-gradient .select .arrow {
+  width: 3vw;
+  height: 3vw;
+  background-image: url("../assets/arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: repeat;
+  position: absolute;
+  right: 5vw;
+}
+.step-5 .bg-gradient p {
+  color: white;
+  width: 80%;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 5vw;
+}
+.step-5 .bg-gradient a {
+  width: 65vw;
+  height: 8vh;
+  text-transform: uppercase;
+  color: #da7d21;
+  border: none;
+  font-size: 4.5vw;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 50px;
+  margin-top: 4vh;
+  background-color: white;
+  text-align: center;
+  line-height: 8vh;
+}
+.step-5 .bg-gradient a .whatsapp-icon {
+  display: inline-block;
+  background-image: url("../assets/whatsapp.png");
+  width: 5vw;
+  height: 5vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 1vw;
+}
+
+/*# sourceMappingURL=all.css.map */
