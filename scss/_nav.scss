@@ -1,0 +1,60 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #30cfd0 0%, #323f84 100%);
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: right top;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20vh;
+
+    h2 {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 10vw;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .title-stroke {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #31518d;
+      color: transparent;
+      transform: translateX(10px) translateY(10px);
+    }
+  }
+
+  p {
+    margin-top: 10vh;
+    text-align: center;
+    width: 70%;
+  }
+
+  a {
+    width: 65vw;
+    height: 8vh;
+    text-transform: uppercase;
+    color: #31518d;
+    border: none;
+    font-size: 4vw;
+    -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 50px;
+    margin-top: 4vh;
+    background-color: white;
+    text-align: center;
+    line-height: 8vh;
+  }
+}

@@ -60,6 +60,7 @@
         cursor: pointer;
         width: 62vw;
         border: none;
+        background-color: white;
       }
 
       select {
@@ -105,17 +106,6 @@
       background-color: white;
       text-align: center;
       line-height: 8vh;
-
-      .whatsapp-icon {
-        display: inline-block;
-        background-image: url('../assets/whatsapp.png');
-        width: 5vw;
-        height: 5vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-left: 1vw;
-      }
     }
   }
 }

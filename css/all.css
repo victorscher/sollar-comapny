@@ -5,8 +5,62 @@
   font-family: "Avenir Next";
 }
 
+.iphone-bar {
+  width: 100%;
+  height: 12.5vh;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+}
+
 body {
   overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  z-index: 3;
+}
+header .logo {
+  width: 35vw;
+  height: 20vh;
+  margin-left: 5vw;
+  background-image: url("../assets/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .menu {
+  height: 4vh;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 7vw;
+}
+header .menu div {
+  width: 10vw;
+  height: 3px;
+  background-color: white;
+}
+header .menu .stick-1 {
+  transform-origin: right top;
+  transition: all 0.5s ease;
+}
+header .menu .stick-2 {
+  transform-origin: right bottom;
+  transition: all 0.5s ease;
+}
+header .menu .stick-none {
+  transition: all 0.5s ease;
 }
 
 .main {
@@ -16,37 +70,6 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
-}
-.main header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 20vh;
-  z-index: 2;
-}
-.main header .logo {
-  width: 35vw;
-  height: 20vh;
-  margin-left: 5vw;
-  background-image: url("../assets/logo.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.main header .menu {
-  height: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 7vw;
-}
-.main header .menu div {
-  width: 10vw;
-  height: 3px;
-  background-color: white;
 }
 
 .step-1 {
@@ -125,7 +148,7 @@ body {
 }
 .step-2 .bg-gradient .slider {
   width: 100%;
-  height: 52vh;
+  height: 48vh;
   display: flex;
   justify-content: center;
   position: relative;
@@ -149,7 +172,7 @@ body {
 .step-2 .bg-gradient .slider .card .card-icon {
   width: 25vw;
   height: 10vh;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 .step-2 .bg-gradient .slider .card h3 {
   text-align: center;
@@ -222,7 +245,7 @@ body {
   background-size: contain;
   position: absolute;
   top: -4vh;
-  right: 8vw;
+  right: 5vw;
 }
 .step-3 .bg-gradient .animation-box .hose-2 {
   width: 25vw;
@@ -232,8 +255,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 8vh;
-  left: -15vw;
+  top: 6vh;
+  left: -17vw;
 }
 .step-3 .bg-gradient .animation-box .hose-3 {
   width: 20vw;
@@ -243,8 +266,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 7vh;
-  right: -15vw;
+  top: 6vh;
+  right: -18vw;
 }
 .step-3 .bg-gradient h2 {
   font-size: 9vw;
@@ -301,12 +324,12 @@ body {
 .step-3 .bg-gradient .slider .card h3 {
   text-align: center;
   font-weight: 500;
-  margin-top: 3vh;
+  margin-top: 2vh;
   font-size: 5vw;
 }
 .step-3 .bg-gradient .slider .card p {
   text-align: center;
-  margin-top: 1vh;
+  margin-top: 0.5vh;
   width: 80%;
   font-size: 3.5vw;
 }
@@ -343,16 +366,24 @@ body {
 }
 .step-4 .bg-gradient .slider {
   width: 100%;
-  height: 25vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   position: relative;
   margin-top: 3vh;
 }
-.step-4 .bg-gradient .slider .card {
-  position: absolute;
+.step-4 .bg-gradient .slider .step {
   width: 80%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+}
+.step-4 .bg-gradient .slider .step .card {
+  width: 100%;
+  height: 48%;
   background-color: white;
   border-radius: 20px;
   display: flex;
@@ -365,7 +396,7 @@ body {
   -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
 }
-.step-4 .bg-gradient .slider .card .card-brand {
+.step-4 .bg-gradient .slider .step .card .card-brand {
   width: 80%;
   height: 60%;
   margin-top: 5%;
@@ -373,7 +404,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.step-4 .bg-gradient .slider .card P {
+.step-4 .bg-gradient .slider .step .card P {
   font-size: 5vw;
   font-weight: 500;
 }
@@ -446,6 +477,7 @@ body {
   cursor: pointer;
   width: 62vw;
   border: none;
+  background-color: white;
 }
 .step-5 .bg-gradient .select select {
   height: 100%;
@@ -487,15 +519,61 @@ body {
   text-align: center;
   line-height: 8vh;
 }
-.step-5 .bg-gradient a .whatsapp-icon {
-  display: inline-block;
-  background-image: url("../assets/whatsapp.png");
-  width: 5vw;
-  height: 5vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 1vw;
+
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #30cfd0 0%, #323f84 100%);
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: right top;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.nav .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 20vh;
+}
+.nav .title h2 {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 10vw;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.nav .title .title-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #31518d;
+  color: transparent;
+  transform: translateX(10px) translateY(10px);
+}
+.nav p {
+  margin-top: 10vh;
+  text-align: center;
+  width: 70%;
+}
+.nav a {
+  width: 65vw;
+  height: 8vh;
+  text-transform: uppercase;
+  color: #31518d;
+  border: none;
+  font-size: 4vw;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 50px;
+  margin-top: 4vh;
+  background-color: white;
+  text-align: center;
+  line-height: 8vh;
 }
 
 /*# sourceMappingURL=all.css.map */
