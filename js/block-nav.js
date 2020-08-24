@@ -2,18 +2,12 @@
   //SELECTORS
   const main = document.querySelector('.main');
   const steps = main.querySelectorAll('section');
-  let isSafari = navigator.userAgent.indexOf('Safari') > -1;
 
   //COUNTERS
   let curPosition = 0;
   let curStep = steps[curPosition];
 
   //EVENT LISTENERS
-  window.addEventListener('load', () => {
-    if (isSafari) {
-      main.style.transform = 'translateY(10vh)';
-    }
-  });
 
   swipedetect(main, function (swipedir) {
     if (swipedir == 'left') {
