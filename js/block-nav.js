@@ -15,6 +15,7 @@
     } else if (swipedir == 'up') {
       swipeNext();
     } else if (swipedir == 'down') {
+      swipePrev();
     }
   });
 
