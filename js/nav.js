@@ -6,8 +6,7 @@ const stickTop = document.querySelector('.stick-top');
 const stickBottom = document.querySelector('.stick-bottom');
 let activeNav = false;
 
-navBtn.addEventListener('click', (e) => {
-  console.log(e);
+navBtn.addEventListener('click', () => {
   if (activeNav) {
     nav.style.transform = 'scale(0)';
     stick1.style.transform = '';

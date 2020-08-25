@@ -46,7 +46,9 @@
   });
 
   pointer.addEventListener('transitionend', () => {
-    navBtn.click();
+    if (activeNav) {
+      navBtn.click();
+    }
   });
 
   swipedetect(main, function (swipedir) {
@@ -99,6 +101,7 @@
       steps[curPosition].style.transform = 'translateY(-100%)';
       steps[curPosition + 1].style.transform = 'translateY(0)';
       curPosition++;
+      pointer.style.transform = `translateY(${curPosition}00%)`;
       curStep = steps[curPosition];
     }
   }
@@ -108,6 +111,7 @@
       steps[curPosition].style.transform = 'translateY(100%)';
       steps[curPosition - 1].style.transform = 'translateY(0)';
       curPosition--;
+      pointer.style.transform = `translateY(${curPosition}00%)`;
       curStep = steps[curPosition];
     }
   }
