@@ -3,11 +3,51 @@
   const main = document.querySelector('.main');
   const steps = main.querySelectorAll('section');
 
+  const pos1 = document.querySelector('.screen-1');
+  const pos2 = document.querySelector('.screen-2');
+  const pos3 = document.querySelector('.screen-3');
+  const pos4 = document.querySelector('.screen-4');
+  const pos5 = document.querySelector('.screen-5');
+  const pointer = document.querySelector('.pointer-box');
+
   //COUNTERS
   let curPosition = 0;
   let curStep = steps[curPosition];
 
   //EVENT LISTENERS
+  pos1.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(0%)';
+    let = curPosition = 0;
+    position();
+  });
+
+  pos2.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(100%)';
+    let = curPosition = 1;
+    position();
+  });
+
+  pos3.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(200%)';
+    let = curPosition = 2;
+    position();
+  });
+
+  pos4.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(300%)';
+    let = curPosition = 3;
+    position();
+  });
+
+  pos5.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(400%)';
+    let = curPosition = 4;
+    position();
+  });
+
+  pointer.addEventListener('transitionend', () => {
+    navBtn.click();
+  });
 
   swipedetect(main, function (swipedir) {
     if (swipedir == 'left') {

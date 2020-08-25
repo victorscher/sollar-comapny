@@ -3,7 +3,7 @@
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(to bottom, #30cfd0 0%, #323f84 100%);
-  z-index: 1;
+  z-index: 2;
   transform: scale(0);
   transform-origin: right top;
   transition: all 0.3s ease;
@@ -17,12 +17,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 20vh;
+    margin-top: 17vh;
 
     h2 {
       position: absolute;
       white-space: nowrap;
-      font-size: 10vw;
+      font-size: 9vw;
       text-transform: uppercase;
       font-weight: 900;
     }
@@ -35,16 +35,15 @@
     }
   }
 
-  p {
+  .text {
     margin-top: 10vh;
     text-align: center;
-    width: 70%;
+    width: 85%;
   }
 
   a {
     width: 65vw;
-    height: 8vh;
-    text-transform: uppercase;
+    height: 7vh;
     color: #31518d;
     border: none;
     font-size: 4vw;
@@ -56,5 +55,169 @@
     background-color: white;
     text-align: center;
     line-height: 8vh;
+    display: flex;
+    @include centralize;
+
+    span {
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
+  .navgator {
+    width: 50%;
+    height: 35vh;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    .line {
+      width: 3%;
+      height: 100%;
+      background-color: white;
+      grid-column: 1 / 2;
+      grid-row: 1 / 5;
+      justify-self: center;
+    }
+
+    .pointer-box {
+      width: 100%;
+      height: 100%;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: center;
+      transition: all 0.5s ease;
+
+      .pointer {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: white;
+      }
+    }
+
+    .pos-1 {
+      width: 4vw;
+      height: 4vw;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      border-radius: 50%;
+      border: 1px solid white;
+      justify-self: center;
+      background-color: #3188ab;
+    }
+
+    .pos-2 {
+      width: 4vw;
+      height: 4vw;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      border-radius: 50%;
+      border: 1px solid white;
+      justify-self: center;
+      background-color: #317ca4;
+    }
+
+    .pos-3 {
+      width: 4vw;
+      height: 4vw;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      border-radius: 50%;
+      border: 1px solid white;
+      justify-self: center;
+      background-color: #316799;
+    }
+
+    .pos-4 {
+      width: 4vw;
+      height: 4vw;
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      border-radius: 50%;
+      border: 1px solid white;
+      justify-self: center;
+      background-color: #326598;
+    }
+
+    .pos-5 {
+      width: 4vw;
+      height: 4vw;
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      border-radius: 50%;
+      border: 1px solid white;
+      justify-self: center;
+      background-color: #315991;
+    }
+
+    .screen-1 {
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: left;
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+
+    .screen-2 {
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      display: flex;
+      justify-content: left;
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+
+    .screen-3 {
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      justify-content: left;
+
+      p {
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+
+    .screen-4 {
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      display: flex;
+      justify-content: left;
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+
+    .screen-5 {
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+      grid-row: 5 / 6;
+      display: flex;
+      justify-content: left;
+
+      p {
+        text-transform: uppercase;
+      }
+    }
   }
 }
