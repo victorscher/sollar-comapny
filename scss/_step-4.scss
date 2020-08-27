@@ -21,13 +21,28 @@
     flex-direction: column;
     align-items: center;
 
-    h2 {
-      font-size: 9vw;
-      color: white;
-      text-transform: uppercase;
-      font-family: 'Avenir Next';
-      font-weight: 900;
-      margin-top: 2vh;
+    .title {
+      @include centralize;
+      margin-top: 5vh;
+      margin-bottom: 4vh;
+      position: relative;
+
+      .title-stroke {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #d3cbb7;
+        color: transparent;
+        transform: translateX(10px) translateY(10px);
+      }
+
+      h2 {
+        position: absolute;
+        font-size: 9vw;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Avenir Next';
+        font-weight: 900;
+        white-space: nowrap;
+      }
     }
 
     .slider {
@@ -61,6 +76,7 @@
           -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
           -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+          position: relative;
 
           .card-brand {
             width: 80%;
@@ -72,6 +88,19 @@
           P {
             font-size: 5vw;
             font-weight: 500;
+          }
+
+          .card-photo {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../assets/case-1.jpg');
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.5s ease;
           }
         }
       }
@@ -91,6 +120,61 @@
       .card:nth-child(3) {
         .card-brand {
           background-image: url('../assets/large_liquidpipeline_0.png');
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    display: flex;
+    flex-direction: row;
+
+    .bg-image {
+      height: 100vh;
+      width: 30%;
+      background-image: url('../assets/step-4-bg-image-desk.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .bg-gradient {
+      height: 100vh;
+      position: relative;
+
+      .title {
+        @include centralize;
+        margin-top: 14vh;
+        margin-bottom: 14vh;
+        position: relative;
+        align-self: start;
+
+        .title-stroke {
+          transform: translateX(15px) translateY(15px);
+        }
+
+        h2 {
+          font-size: 4vw;
+          margin-top: 17vh;
+        }
+      }
+
+      .slider {
+        flex-direction: row;
+        height: 60vh;
+        width: 90%;
+
+        .step {
+          position: static;
+
+          .card {
+            width: 21vw;
+            height: 48%;
+            position: relative;
+
+            p {
+              font-size: 1.4vw;
+            }
+          }
         }
       }
     }

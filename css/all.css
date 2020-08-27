@@ -15,6 +15,24 @@
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .mob-only {
+    display: unset;
+  }
+
+  .desk-only {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .mob-only {
+    display: none;
+  }
+
+  .desk-only {
+    display: unset;
+  }
+}
 body {
   overflow: hidden;
 }
@@ -48,7 +66,7 @@ header .menu {
   position: relative;
 }
 header .menu div {
-  width: 10vw;
+  width: 100%;
   height: 3px;
   background-color: white;
   position: absolute;
@@ -68,6 +86,16 @@ header .menu .stick-top {
 header .menu .stick-bottom {
   bottom: 0;
   transition: all 0.5s ease;
+}
+@media (min-width: 1024px) {
+  header .logo {
+    width: 10vw;
+    height: 10vh;
+  }
+  header .menu {
+    height: 3vh;
+    width: 3vw;
+  }
 }
 
 .main {
@@ -146,6 +174,23 @@ header .menu .stick-bottom {
     transform: translateY(-20px);
   }
 }
+@media (min-width: 1025px) {
+  .step-1 div {
+    width: 70%;
+    align-items: start;
+  }
+  .step-1 h1 {
+    font-size: 2vw;
+    text-align: left !important;
+  }
+  .step-1 h2 {
+    font-size: 4vw !important;
+    text-align: left !important;
+  }
+  .step-1 .hand {
+    display: none;
+  }
+}
 
 .step-2 {
   width: 100%;
@@ -167,14 +212,28 @@ header .menu .stick-bottom {
   flex-direction: column;
   align-items: center;
 }
-.step-2 .bg-gradient h2 {
+.step-2 .bg-gradient .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  position: relative;
+}
+.step-2 .bg-gradient .title .title-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #31518d;
+  color: transparent;
+  transform: translateX(10px) translateY(10px);
+}
+.step-2 .bg-gradient .title h2 {
+  position: absolute;
   font-size: 9vw;
   color: white;
   text-transform: uppercase;
   font-family: "Avenir Next";
   font-weight: 900;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
 }
 .step-2 .bg-gradient .slider {
   width: 100%;
@@ -239,6 +298,56 @@ header .menu .stick-bottom {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media (min-width: 1025px) {
+  .step-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .step-2 .bg-image {
+    height: 100vh;
+    width: 30%;
+    background-image: url("../assets/step-2-bg-image-desk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .step-2 .bg-gradient {
+    height: 100vh;
+  }
+  .step-2 .bg-gradient .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+    position: relative;
+    align-self: start;
+  }
+  .step-2 .bg-gradient .title .title-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #31518d;
+    color: transparent;
+    transform: translateX(15px) translateY(15px);
+  }
+  .step-2 .bg-gradient .title h2 {
+    font-size: 4vw;
+    margin-top: 17vh;
+  }
+  .step-2 .bg-gradient .slider {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 5vh;
+  }
+  .step-2 .bg-gradient .slider .card {
+    position: static;
+    width: 16vw;
+    height: 55vh;
+  }
+  .step-2 .bg-gradient .slider .card p {
+    font-size: 1vw;
+  }
+}
 
 .step-3 {
   width: 100%;
@@ -299,13 +408,29 @@ header .menu .stick-bottom {
   top: 6vh;
   right: -18vw;
 }
-.step-3 .bg-gradient h2 {
+.step-3 .bg-gradient .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  position: relative;
+}
+.step-3 .bg-gradient .title .title-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #77dd76;
+  color: transparent;
+  transform: translateX(10px) translateY(10px);
+}
+.step-3 .bg-gradient .title h2 {
+  position: absolute;
   font-size: 9vw;
   color: white;
   text-transform: uppercase;
   font-family: "Avenir Next";
   font-weight: 900;
-  margin-top: 2vh;
+  white-space: nowrap;
 }
 .step-3 .bg-gradient .slider {
   width: 100%;
@@ -363,6 +488,128 @@ header .menu .stick-bottom {
   width: 80%;
   font-size: 3.5vw;
 }
+@media (min-width: 1025px) {
+  .step-3 {
+    display: flex;
+    flex-direction: row;
+  }
+  .step-3 .bg-image {
+    height: 100vh;
+    width: 30%;
+    background-image: url("../assets/step-3-bg-image-desk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .step-3 .bg-gradient {
+    height: 100vh;
+    position: relative;
+  }
+  .step-3 .bg-gradient .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+    position: relative;
+    align-self: start;
+    transform: translateX(7vw);
+  }
+  .step-3 .bg-gradient .title .title-stroke {
+    transform: translateX(15px) translateY(15px);
+  }
+  .step-3 .bg-gradient .title h2 {
+    font-size: 4vw;
+    margin-top: 17vh;
+  }
+  .step-3 .bg-gradient .animation-box {
+    margin-top: 15vh;
+  }
+  .step-3 .bg-gradient .animation-box lottie-player {
+    width: 25vw !important;
+    height: 25vw !important;
+  }
+  .step-3 .bg-gradient .animation-box .hose-1 {
+    display: none;
+  }
+  .step-3 .bg-gradient .animation-box .hose-2 {
+    display: none;
+  }
+  .step-3 .bg-gradient .animation-box .hose-3 {
+    display: none;
+  }
+  .step-3 .bg-gradient .slider {
+    height: 100%;
+    position: absolute;
+    margin-top: 0;
+  }
+  .step-3 .bg-gradient .slider .card {
+    width: 16vw;
+    height: 35vh;
+  }
+  .step-3 .bg-gradient .slider .card .card-number {
+    width: 2vw;
+    height: 2vw;
+    top: -0.9vw;
+  }
+  .step-3 .bg-gradient .slider .card .card-number p {
+    font-size: 1vw;
+  }
+  .step-3 .bg-gradient .slider .card h3 {
+    font-size: 1.4vw;
+  }
+  .step-3 .bg-gradient .slider .card p {
+    font-size: 1vw;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(1) {
+    right: 17vw;
+    top: 13vh;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(1) .hose-1-desktop {
+    width: 16vw;
+    height: 20vh;
+    background-image: url("../assets/hose-1-desktop.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 14vh;
+    left: -13vw;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(2) {
+    left: 8vw;
+    top: 45vh;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(2) .hose-2-desktop {
+    width: 7vw;
+    height: 15vh;
+    background-image: url("../assets/hose-2-desktop.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 14vh;
+    right: -5vw;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(3) {
+    right: 5vw;
+    top: 50vh;
+  }
+  .step-3 .bg-gradient .slider .card:nth-child(3) .hose-3-desktop {
+    width: 10vw;
+    height: 17vh;
+    background-image: url("../assets/hose-3-desktop.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10vh;
+    left: -7vw;
+  }
+}
 
 .step-4 {
   width: 100%;
@@ -386,13 +633,29 @@ header .menu .stick-bottom {
   flex-direction: column;
   align-items: center;
 }
-.step-4 .bg-gradient h2 {
+.step-4 .bg-gradient .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  position: relative;
+}
+.step-4 .bg-gradient .title .title-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d3cbb7;
+  color: transparent;
+  transform: translateX(10px) translateY(10px);
+}
+.step-4 .bg-gradient .title h2 {
+  position: absolute;
   font-size: 9vw;
   color: white;
   text-transform: uppercase;
   font-family: "Avenir Next";
   font-weight: 900;
-  margin-top: 2vh;
+  white-space: nowrap;
 }
 .step-4 .bg-gradient .slider {
   width: 100%;
@@ -425,6 +688,7 @@ header .menu .stick-bottom {
   -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  position: relative;
 }
 .step-4 .bg-gradient .slider .step .card .card-brand {
   width: 80%;
@@ -438,6 +702,18 @@ header .menu .stick-bottom {
   font-size: 5vw;
   font-weight: 500;
 }
+.step-4 .bg-gradient .slider .step .card .card-photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/case-1.jpg");
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 .step-4 .bg-gradient .slider .card:nth-child(1) .card-brand {
   background-image: url("../assets/large_collegebound.png");
 }
@@ -446,6 +722,56 @@ header .menu .stick-bottom {
 }
 .step-4 .bg-gradient .slider .card:nth-child(3) .card-brand {
   background-image: url("../assets/large_liquidpipeline_0.png");
+}
+@media (min-width: 1025px) {
+  .step-4 {
+    display: flex;
+    flex-direction: row;
+  }
+  .step-4 .bg-image {
+    height: 100vh;
+    width: 30%;
+    background-image: url("../assets/step-4-bg-image-desk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .step-4 .bg-gradient {
+    height: 100vh;
+    position: relative;
+  }
+  .step-4 .bg-gradient .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+    position: relative;
+    align-self: start;
+  }
+  .step-4 .bg-gradient .title .title-stroke {
+    transform: translateX(15px) translateY(15px);
+  }
+  .step-4 .bg-gradient .title h2 {
+    font-size: 4vw;
+    margin-top: 17vh;
+  }
+  .step-4 .bg-gradient .slider {
+    flex-direction: row;
+    height: 60vh;
+    width: 90%;
+  }
+  .step-4 .bg-gradient .slider .step {
+    position: static;
+  }
+  .step-4 .bg-gradient .slider .step .card {
+    width: 21vw;
+    height: 48%;
+    position: relative;
+  }
+  .step-4 .bg-gradient .slider .step .card p {
+    font-size: 1.4vw;
+  }
 }
 
 .step-5 {
@@ -470,12 +796,29 @@ header .menu .stick-bottom {
   flex-direction: column;
   align-items: center;
 }
-.step-5 .bg-gradient h2 {
+.step-5 .bg-gradient .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  position: relative;
+}
+.step-5 .bg-gradient .title .title-stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #dc8022;
+  color: transparent;
+  transform: translateX(10px) translateY(10px);
+}
+.step-5 .bg-gradient .title h2 {
+  position: absolute;
   font-size: 9vw;
   color: white;
   text-transform: uppercase;
+  font-family: "Avenir Next";
   font-weight: 900;
-  margin-top: 2vh;
+  white-space: nowrap;
 }
 .step-5 .bg-gradient h3 {
   color: white;
@@ -505,7 +848,6 @@ header .menu .stick-bottom {
   outline: none;
   box-shadow: none;
   cursor: pointer;
-  width: 62vw;
   border: none;
   background-color: white;
 }
@@ -515,6 +857,7 @@ header .menu .stick-bottom {
   text-align: center;
   padding-left: 13vw;
   font-size: 5vw;
+  color: gray;
 }
 .step-5 .bg-gradient .select .arrow {
   width: 3vw;
@@ -525,6 +868,7 @@ header .menu .stick-bottom {
   background-size: repeat;
   position: absolute;
   right: 5vw;
+  pointer-events: none;
 }
 .step-5 .bg-gradient p {
   color: white;
@@ -548,6 +892,69 @@ header .menu .stick-bottom {
   background-color: white;
   text-align: center;
   line-height: 8vh;
+}
+@media (min-width: 1025px) {
+  .step-5 {
+    display: flex;
+    flex-direction: row;
+  }
+  .step-5 .bg-image {
+    height: 100vh;
+    width: 30%;
+    background-image: url("../assets/step-5-bg-image-desk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .step-5 .bg-gradient {
+    height: 100vh;
+    position: relative;
+  }
+  .step-5 .bg-gradient .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14vh;
+    margin-bottom: 14vh;
+    position: relative;
+    align-self: start;
+  }
+  .step-5 .bg-gradient .title .title-stroke {
+    transform: translateX(15px) translateY(15px);
+  }
+  .step-5 .bg-gradient .title h2 {
+    font-size: 4vw;
+    margin-top: 17vh;
+  }
+  .step-5 .bg-gradient h3 {
+    font-size: 2vw;
+    margin-top: 5vh;
+  }
+  .step-5 .bg-gradient .select {
+    width: 15vw;
+    margin-top: 7vh;
+  }
+  .step-5 .bg-gradient .select select {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-left: 4vw;
+    font-size: 1.3vw;
+  }
+  .step-5 .bg-gradient .select .arrow {
+    right: 0.5vw;
+  }
+  .step-5 .bg-gradient p {
+    font-size: 1.5vw;
+    width: 58%;
+    margin-top: 7vh;
+  }
+  .step-5 .bg-gradient a {
+    width: 22vw;
+    height: 7vh;
+    font-size: 1.4vw;
+    margin-top: 7vh;
+  }
 }
 
 .nav {
@@ -750,6 +1157,24 @@ header .menu .stick-bottom {
 }
 .nav .navgator .screen-5 p {
   text-transform: uppercase;
+}
+@media (min-width: 1025px) {
+  .nav .title h2 {
+    font-size: 5vw;
+  }
+  .nav .text {
+    width: 50%;
+    font-size: 1.5vw;
+    margin-top: 20vh;
+  }
+  .nav a {
+    width: 30vw;
+    font-size: 1.4vw;
+    margin-top: 10vh;
+  }
+  .nav .navgator {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */

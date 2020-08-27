@@ -23,7 +23,9 @@
   });
 
   window.addEventListener('load', function () {
-    position();
+    if (window.innerWidth <= 1024) {
+      position();
+    }
   });
 
   //FUNCTIONS

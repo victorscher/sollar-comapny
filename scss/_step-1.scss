@@ -63,4 +63,25 @@
       }
     }
   }
+
+  @media (min-width: 1025px) {
+    div {
+      width: 70%;
+      align-items: start;
+    }
+
+    h1 {
+      font-size: 2vw;
+      text-align: left !important;
+    }
+
+    h2 {
+      font-size: 4vw !important;
+      text-align: left !important;
+    }
+
+    .hand {
+      display: none;
+    }
+  }
 }

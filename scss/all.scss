@@ -15,6 +15,26 @@
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .mob-only {
+    display: unset;
+  }
+
+  .desk-only {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mob-only {
+    display: none;
+  }
+
+  .desk-only {
+    display: unset;
+  }
+}
+
 @import 'mixins';
 @import 'main';
 @import 'step-1';

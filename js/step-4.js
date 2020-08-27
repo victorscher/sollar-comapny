@@ -2,13 +2,26 @@
   //SELECTORS
   const step4 = document.querySelector('.step-4');
   const slider = step4.querySelector('.slider');
-  const cards = slider.querySelectorAll('.step');
+  const steps = slider.querySelectorAll('.step');
+  const cards = slider.querySelectorAll('.card');
 
   //COUNTERS
   let curPosition = 0;
-  let curCard = cards[curPosition];
+  let curCard = steps[curPosition];
 
   //EVENT LISTENERS
+
+  cards.forEach((card) => {
+    card.addEventListener('mouseover', () => {
+      let cardPhoto = card.querySelector('.card-photo');
+      cardPhoto.style.opacity = '1';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      let cardPhoto = card.querySelector('.card-photo');
+      cardPhoto.style.opacity = '0';
+    });
+  });
 
   swipedetect(slider, function (swipedir) {
     if (swipedir == 'left') {
@@ -23,13 +36,15 @@
   });
 
   window.addEventListener('load', function () {
-    position();
+    if (window.innerWidth <= 1024) {
+      position();
+    }
   });
 
   //FUNCTIONS
 
   function position() {
-    cards.forEach((card, index) => {
+    steps.forEach((card, index) => {
       if (index == curPosition) {
         card.style.transform = 'translateX(0)';
       } else if (index > curPosition) {
@@ -39,26 +54,26 @@
       }
     });
 
-    cards.forEach((card) => {
+    steps.forEach((card) => {
       card.style.transition = 'all 1s ease';
     });
   }
 
   function swipeNext() {
     if (curPosition < 2) {
-      cards[curPosition].style.transform = 'translateX(-105%)';
-      cards[curPosition + 1].style.transform = 'translateY(0)';
+      steps[curPosition].style.transform = 'translateX(-105%)';
+      steps[curPosition + 1].style.transform = 'translateY(0)';
       curPosition++;
-      curStep = cards[curPosition];
+      curStep = steps[curPosition];
     }
   }
 
   function swipePrev() {
     if (curPosition > 0) {
-      cards[curPosition].style.transform = 'translateX(105%)';
-      cards[curPosition - 1].style.transform = 'translateY(0)';
+      steps[curPosition].style.transform = 'translateX(105%)';
+      steps[curPosition - 1].style.transform = 'translateY(0)';
       curPosition--;
-      curStep = cards[curPosition];
+      curStep = steps[curPosition];
     }
   }
 

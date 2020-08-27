@@ -56,13 +56,28 @@
       }
     }
 
-    h2 {
-      font-size: 9vw;
-      color: white;
-      text-transform: uppercase;
-      font-family: 'Avenir Next';
-      font-weight: 900;
-      margin-top: 2vh;
+    .title {
+      @include centralize;
+      margin-top: 5vh;
+      margin-bottom: 4vh;
+      position: relative;
+
+      .title-stroke {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #77dd76;
+        color: transparent;
+        transform: translateX(10px) translateY(10px);
+      }
+
+      h2 {
+        position: absolute;
+        font-size: 9vw;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Avenir Next';
+        font-weight: 900;
+        white-space: nowrap;
+      }
     }
 
     .slider {
@@ -120,6 +135,140 @@
           margin-top: 0.5vh;
           width: 80%;
           font-size: 3.5vw;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    display: flex;
+    flex-direction: row;
+
+    .bg-image {
+      height: 100vh;
+      width: 30%;
+      background-image: url('../assets/step-3-bg-image-desk.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .bg-gradient {
+      height: 100vh;
+      position: relative;
+
+      .title {
+        @include centralize;
+        margin-top: 14vh;
+        margin-bottom: 14vh;
+        position: relative;
+        align-self: start;
+        transform: translateX(7vw);
+
+        .title-stroke {
+          transform: translateX(15px) translateY(15px);
+        }
+
+        h2 {
+          font-size: 4vw;
+          margin-top: 17vh;
+        }
+      }
+
+      .animation-box {
+        margin-top: 15vh;
+
+        lottie-player {
+          width: 25vw !important;
+          height: 25vw !important;
+        }
+
+        .hose-1 {
+          display: none;
+        }
+
+        .hose-2 {
+          display: none;
+        }
+
+        .hose-3 {
+          display: none;
+        }
+      }
+
+      .slider {
+        height: 100%;
+        position: absolute;
+        margin-top: 0;
+
+        .card {
+          width: 16vw;
+          height: 35vh;
+
+          .card-number {
+            width: 2vw;
+            height: 2vw;
+            top: -0.9vw;
+
+            p {
+              font-size: 1vw;
+            }
+          }
+
+          h3 {
+            font-size: 1.4vw;
+          }
+
+          p {
+            font-size: 1vw;
+          }
+        }
+
+        .card:nth-child(1) {
+          right: 17vw;
+          top: 13vh;
+
+          .hose-1-desktop {
+            width: 16vw;
+            height: 20vh;
+            background-image: url('../assets/hose-1-desktop.png');
+            background-size: contain;
+            @include background-center;
+            position: absolute;
+            top: 14vh;
+            left: -13vw;
+          }
+        }
+
+        .card:nth-child(2) {
+          left: 8vw;
+          top: 45vh;
+
+          .hose-2-desktop {
+            width: 7vw;
+            height: 15vh;
+            background-image: url('../assets/hose-2-desktop.png');
+            background-size: contain;
+            @include background-center;
+            position: absolute;
+            top: 14vh;
+            right: -5vw;
+          }
+        }
+
+        .card:nth-child(3) {
+          right: 5vw;
+          top: 50vh;
+
+          .hose-3-desktop {
+            width: 10vw;
+            height: 17vh;
+            background-image: url('../assets/hose-3-desktop.png');
+            background-size: contain;
+            @include background-center;
+            position: absolute;
+            top: 10vh;
+            left: -7vw;
+          }
         }
       }
     }

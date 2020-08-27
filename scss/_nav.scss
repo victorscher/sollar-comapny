@@ -220,4 +220,28 @@
       }
     }
   }
+
+  @media (min-width: 1025px) {
+    .title {
+      h2 {
+        font-size: 5vw;
+      }
+    }
+
+    .text {
+      width: 50%;
+      font-size: 1.5vw;
+      margin-top: 20vh;
+    }
+
+    a {
+      width: 30vw;
+      font-size: 1.4vw;
+      margin-top: 10vh;
+    }
+
+    .navgator {
+      display: none;
+    }
+  }
 }
