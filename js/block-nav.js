@@ -3,12 +3,20 @@
   const main = document.querySelector('.main');
   const steps = main.querySelectorAll('section');
 
-  const pos1 = document.querySelector('.screen-1');
-  const pos2 = document.querySelector('.screen-2');
-  const pos3 = document.querySelector('.screen-3');
-  const pos4 = document.querySelector('.screen-4');
-  const pos5 = document.querySelector('.screen-5');
-  const pointer = document.querySelector('.pointer-box');
+  if (window.innerWidth < 1025) {
+    var navgator = document.querySelector('.navgator-mob');
+  } else {
+    var navgator = document.querySelector('.navgator-desk');
+  }
+
+  console.log(navgator);
+
+  const pos1 = navgator.querySelector('.screen-1');
+  const pos2 = navgator.querySelector('.screen-2');
+  const pos3 = navgator.querySelector('.screen-3');
+  const pos4 = navgator.querySelector('.screen-4');
+  const pos5 = navgator.querySelector('.screen-5');
+  const pointer = navgator.querySelector('.pointer-box');
 
   //COUNTERS
   let curPosition = 0;
@@ -18,30 +26,35 @@
   pos1.addEventListener('click', () => {
     pointer.style.transform = 'translateY(0%)';
     let = curPosition = 0;
+    curStep = steps[curPosition];
     position();
   });
 
   pos2.addEventListener('click', () => {
     pointer.style.transform = 'translateY(100%)';
     let = curPosition = 1;
+    curStep = steps[curPosition];
     position();
   });
 
   pos3.addEventListener('click', () => {
     pointer.style.transform = 'translateY(200%)';
     let = curPosition = 2;
+    curStep = steps[curPosition];
     position();
   });
 
   pos4.addEventListener('click', () => {
     pointer.style.transform = 'translateY(300%)';
     let = curPosition = 3;
+    curStep = steps[curPosition];
     position();
   });
 
   pos5.addEventListener('click', () => {
     pointer.style.transform = 'translateY(400%)';
     let = curPosition = 4;
+    curStep = steps[curPosition];
     position();
   });
 
@@ -89,6 +102,12 @@
       } else if (index < curPosition) {
         step.style.transform = 'translateY(-100%)';
       }
+
+      if (curPosition == 0) {
+        navgator.style.opacity = 0;
+      } else {
+        navgator.style.opacity = 1;
+      }
     });
 
     steps.forEach((step) => {
@@ -121,6 +140,12 @@
       swipeNext();
     } else if (scdir === 'down' && curStep.getClientRects()[0].y == 0) {
       swipePrev();
+    }
+
+    if (curPosition == 0) {
+      navgator.style.opacity = 0;
+    } else {
+      navgator.style.opacity = 1;
     }
   }
 

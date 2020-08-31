@@ -55,7 +55,7 @@
 
     .select {
       margin-top: 5vh;
-      width: 50vw;
+      width: 70vw;
       height: 6vh;
       border-radius: 20px;
       overflow: hidden;
@@ -82,9 +82,10 @@
         height: 100%;
         width: 100%;
         text-align: center;
-        padding-left: 13vw;
+        padding-left: 0;
         font-size: 5vw;
         color: gray;
+        text-align-last: center;
       }
 
       .arrow {
@@ -165,14 +166,13 @@
       }
 
       .select {
-        width: 15vw;
+        width: 20vw;
         margin-top: 7vh;
 
         select {
           height: 100%;
           width: 100%;
           text-align: center;
-          padding-left: 4vw;
           font-size: 1.3vw;
         }
 

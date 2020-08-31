@@ -71,6 +71,7 @@
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    position: static;
 
     .line {
       width: 3%;
@@ -243,5 +244,178 @@
     .navgator {
       display: none;
     }
+  }
+}
+
+.navgator {
+  width: 10vw;
+  height: 30vh;
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+  z-index: 4;
+  left: 6vw;
+  bottom: 5vh;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  .line {
+    width: 3%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    justify-self: center;
+  }
+
+  .pointer-box {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+
+    .pointer {
+      width: 0.8vw;
+      height: 0.8vw;
+      border-radius: 50%;
+      border: 1px solid white;
+      background-color: white;
+    }
+  }
+
+  .pos-1 {
+    width: 0.8vw;
+    height: 0.8vw;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  .pos-2 {
+    width: 0.8vw;
+    height: 0.8vw;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  .pos-3 {
+    width: 0.8vw;
+    height: 0.8vw;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  .pos-4 {
+    width: 0.8vw;
+    height: 0.8vw;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  .pos-5 {
+    width: 0.8vw;
+    height: 0.8vw;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+    background-color: transparent;
+  }
+
+  .screen-1 {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: left;
+
+    p {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .screen-2 {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: left;
+
+    p {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .screen-3 {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: left;
+
+    p {
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: white;
+    }
+  }
+
+  .screen-4 {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: left;
+
+    p {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  .screen-5 {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: left;
+
+    p {
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
   }
 }
