@@ -599,13 +599,14 @@ header .menu .stick-bottom {
     top: -0.9vw;
   }
   .step-3 .bg-gradient .slider .card .card-number p {
-    font-size: 1vw;
+    font-size: 1.2vw;
   }
   .step-3 .bg-gradient .slider .card h3 {
-    font-size: 1.4vw;
+    font-size: 1.5vw;
+    margin-top: 2vh;
   }
   .step-3 .bg-gradient .slider .card p {
-    font-size: 1vw;
+    font-size: 1.1vw;
   }
   .step-3 .bg-gradient .slider .card:nth-child(1) {
     right: 17vw;
@@ -903,7 +904,7 @@ header .menu .stick-bottom {
   margin-top: 5vh;
   width: 70vw;
   height: 6vh;
-  border-radius: 20px;
+  border-radius: 50px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
@@ -930,7 +931,7 @@ header .menu .stick-bottom {
   padding-left: 0;
   font-size: 5vw;
   color: gray;
-  text-align-last: center;
+  padding-left: 11vw;
 }
 .step-5 .bg-gradient .select .arrow {
   width: 3vw;
@@ -1009,12 +1010,15 @@ header .menu .stick-bottom {
   .step-5 .bg-gradient .select {
     width: 20vw;
     margin-top: 7vh;
+    border-radius: 50px;
   }
   .step-5 .bg-gradient .select select {
     height: 100%;
     width: 100%;
     text-align: center;
     font-size: 1.3vw;
+    padding-left: 0;
+    text-align-last: center;
   }
   .step-5 .bg-gradient .select .arrow {
     right: 0.5vw;
@@ -1074,11 +1078,11 @@ header .menu .stick-bottom {
 .nav a {
   width: max-content;
   padding: 0 10vw;
-  height: 8vh;
+  height: 5vh;
   text-transform: uppercase;
   color: #31709e;
   border: none;
-  font-size: 4.5vw;
+  font-size: 4vw;
   -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
@@ -1086,7 +1090,7 @@ header .menu .stick-bottom {
   margin-top: 4vh;
   background-color: white;
   text-align: center;
-  line-height: 8vh;
+  line-height: 5.5vh;
   transition: all 0.5s linear;
   cursor: pointer;
 }
@@ -1229,20 +1233,85 @@ header .menu .stick-bottom {
 .nav .navgator .screen-5 p {
   text-transform: uppercase;
 }
+.nav .nav-text {
+  margin-top: 10vh;
+}
+.nav .select {
+  margin-top: 3vh;
+  width: 60vw;
+  height: 5vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+}
+.nav .select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+.nav .select select {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-left: 12vw;
+  font-size: 4vw;
+  color: gray;
+}
+.nav .select .arrow {
+  width: 3vw;
+  height: 3vw;
+  background-image: url("../assets/arrow-blue.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 5vw;
+  pointer-events: none;
+}
 @media (min-width: 1025px) {
+  .nav .nav-text {
+    font-size: 1.8vw;
+    margin-top: 17vh;
+  }
+  .nav .select {
+    width: 20vw;
+    margin-top: 7vh;
+    height: 7vh;
+    border-radius: 50px;
+  }
+  .nav .select select {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3vw;
+    padding-left: 0;
+    text-align-last: center;
+  }
+  .nav .select .arrow {
+    right: 0.5vw;
+    height: 2vh;
+  }
   .nav .title h2 {
     font-size: 5vw;
   }
-  .nav .text {
-    width: 50%;
-    font-size: 1.5vw;
-    margin-top: 20vh;
-  }
   .nav a {
-    width: 30vw;
+    width: 17vw;
     font-size: 1.4vw;
     margin-top: 10vh;
     padding: 0 0vw;
+    height: 7vh;
+    line-height: 7vh;
   }
   .nav .navgator {
     display: none;

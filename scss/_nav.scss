@@ -44,11 +44,11 @@
   a {
     width: max-content;
     padding: 0 10vw;
-    height: 8vh;
+    height: 5vh;
     text-transform: uppercase;
     color: #31709e;
     border: none;
-    font-size: 4.5vw;
+    font-size: 4vw;
     -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
     box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
@@ -56,7 +56,7 @@
     margin-top: 4vh;
     background-color: white;
     text-align: center;
-    line-height: 8vh;
+    line-height: 5.5vh;
     transition: all 0.5s linear;
     cursor: pointer;
   }
@@ -219,24 +219,98 @@
     }
   }
 
+  .nav-text {
+    margin-top: 10vh;
+  }
+
+  .select {
+    margin-top: 3vh;
+    width: 60vw;
+    height: 5vh;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      outline: none;
+      box-shadow: none;
+      cursor: pointer;
+      border: none;
+      background-color: white;
+    }
+
+    select {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding-left: 12vw;
+      font-size: 4vw;
+      color: gray;
+      // text-align-last: center;
+    }
+
+    .arrow {
+      width: 3vw;
+      height: 3vw;
+      background-image: url('../assets/arrow-blue.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 5vw;
+      pointer-events: none;
+    }
+  }
+
   @media (min-width: 1025px) {
+    .nav-text {
+      font-size: 1.8vw;
+      margin-top: 17vh;
+    }
+
+    .select {
+      width: 20vw;
+      margin-top: 7vh;
+      height: 7vh;
+      border-radius: 50px;
+
+      select {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.3vw;
+        padding-left: 0;
+        text-align-last: center;
+      }
+
+      .arrow {
+        right: 0.5vw;
+        height: 2vh;
+      }
+    }
+
     .title {
       h2 {
         font-size: 5vw;
       }
     }
 
-    .text {
-      width: 50%;
-      font-size: 1.5vw;
-      margin-top: 20vh;
-    }
-
     a {
-      width: 30vw;
+      width: 17vw;
       font-size: 1.4vw;
       margin-top: 10vh;
       padding: 0 0vw;
+      height: 7vh;
+      line-height: 7vh;
     }
 
     .navgator {
