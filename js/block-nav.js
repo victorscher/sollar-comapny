@@ -16,6 +16,7 @@
   const pos3 = navgator.querySelector('.screen-3');
   const pos4 = navgator.querySelector('.screen-4');
   const pos5 = navgator.querySelector('.screen-5');
+  const logo = document.querySelector('.logo');
   const pointer = navgator.querySelector('.pointer-box');
 
   //COUNTERS
@@ -24,6 +25,13 @@
 
   //EVENT LISTENERS
   pos1.addEventListener('click', () => {
+    pointer.style.transform = 'translateY(0%)';
+    let = curPosition = 0;
+    curStep = steps[curPosition];
+    position();
+  });
+
+  logo.addEventListener('click', () => {
     pointer.style.transform = 'translateY(0%)';
     let = curPosition = 0;
     curStep = steps[curPosition];
@@ -103,10 +111,12 @@
         step.style.transform = 'translateY(-100%)';
       }
 
-      if (curPosition == 0) {
-        navgator.style.opacity = 0;
-      } else {
-        navgator.style.opacity = 1;
+      if (window.innerWidth > 1024) {
+        if (curPosition == 0) {
+          navgator.style.opacity = 0;
+        } else {
+          navgator.style.opacity = 1;
+        }
       }
     });
 

@@ -40,7 +40,7 @@
     }
 
     .hand {
-      background-image: url('../assets/hand.svg');
+      background-image: url('../assets/hand.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -48,19 +48,37 @@
       height: 10vw;
       margin-top: 55vh;
       animation-name: up;
-      animation-timing-function: ease-in;
-      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
-      animation-direction: alternate;
+      animation-direction: normal;
     }
 
     @keyframes up {
-      from {
+      0% {
         transform: translateY(0);
+        opacity: 0;
       }
-      to {
-        transform: translateY(-20px);
+      25% {
+        transform: translateY(-5px);
+        opacity: 0.9;
       }
+      50% {
+        transform: translateY(-15px);
+        opacity: 1;
+      }
+      75% {
+        transform: translateY(-25px);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+    }
+
+    .scroll-down {
+      display: none;
     }
   }
 
@@ -68,6 +86,38 @@
     div {
       width: 70%;
       align-items: start;
+
+      .scroll-down {
+        display: block;
+        width: 3vw;
+        align-self: center;
+        margin-top: 60vh;
+        position: absolute;
+        opacity: 0.8;
+
+        #scroll {
+          animation-name: down;
+          animation-timing-function: ease-in;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+        }
+      }
+
+      @keyframes down {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        50% {
+          transform: translateY(10px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+      }
     }
 
     h1 {

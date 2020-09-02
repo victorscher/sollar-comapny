@@ -113,7 +113,7 @@
       width: 65vw;
       height: 8vh;
       text-transform: uppercase;
-      color: #da7d21;
+      color: gray;
       border: none;
       font-size: 4.5vw;
       -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
@@ -124,6 +124,9 @@
       background-color: white;
       text-align: center;
       line-height: 8vh;
+      transition: all 0.5s linear;
+      cursor: pointer;
+      pointer-events: none;
     }
   }
 

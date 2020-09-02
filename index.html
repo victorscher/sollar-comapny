@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/all.css">
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <title>Sollar Company</title>
 </head>
@@ -57,13 +58,13 @@
 
   <div class="nav">
     <div class="title">
-      <h2 class="title-stroke">sobre nós</h2>
-      <h2>sobre nós</h2>
+      <h2 class="title-stroke">SAC</h2>
+      <h2>SAC</h2>
     </div>
 
-    <p class="text">Envie uma foto da sua conta de energia para o nosso WhatsApp e um de nossos representantes irá prontamente atende-lo</p>
+    <p class="text">Já é nosso cliente e está tendo algum tipo de problema ou duvidas? Entre em contato com o nosso suporte</p>
 
-    <a><span>solicite um orçamento <i class="fab fa-whatsapp"></i> </span></a>
+    <a target="_blank">Atendimento ao cliente <i class="fab fa-whatsapp"></i> </a>
 
     <div class="navgator navgator-mob">
       <div class="line"></div>
@@ -110,6 +111,31 @@
         <h2>O futuro é hoje.</h2>
 
         <div class="hand"></div>
+
+        <svg class="scroll-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 289">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke-width: 4px;
+              }
+
+              .cls-1,
+              .cls-2 {
+                stroke: #fff;
+                stroke-miterlimit: 10;
+              }
+
+              .cls-2 {
+                fill: #fff;
+              }
+            </style>
+          </defs>
+          <rect id="mouse" class="cls-1" x="2" y="2" width="154" height="285" rx="77" />
+          <rect id="scroll-base" class="cls-1" x="69" y="41.5" width="20" height="50" rx="10" />
+          <rect id="scroll" class="cls-2" x="76.5" y="49" width="5" height="12" rx="2.5" />
+        </svg>
+
       </div>
 
     </section>
@@ -267,10 +293,11 @@
         </h3>
 
         <div class="select">
-          <select name="" id="">
-            <option value="">Guanambi</option>
-            <option value="">Barreiras</option>
-            <option value="">Vitória da Conquista</option>
+          <select name="" id="city">
+            <option value="" selected></option>
+            <option value="5577998075037">Guanambi</option>
+            <option value="5577999760046">Barreiras</option>
+            <option value="5577999610770">Vitória da Conquista</option>
           </select>
           <div class="arrow"></div>
         </div>
@@ -278,7 +305,7 @@
 
         <p>Envie uma foto da sua conta de energia para o nosso WhatsApp e um de nossos representantes irá prontamente atende-lo</p>
 
-        <a>ir para o WhatsApp <i class="fab fa-whatsapp"></i> </a>
+        <a target="_blank" id="whatsapp">ir para o WhatsApp <i class="fab fa-whatsapp"></i> </a>
 
       </div>
     </section>
@@ -290,6 +317,7 @@
   <script src="./js/step-3.js"></script>
   <script src="./js/step-4.js"></script>
   <script src="./js/nav.js"></script>
+  <script src="./js/contact.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 289">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="mouse" class="cls-1" x="2" y="2" width="154" height="285" rx="77"/>
+  <rect id="scroll-base" class="cls-1" x="69" y="41.5" width="20" height="50" rx="10"/>
+  <rect id="scroll" class="cls-2" x="76.5" y="49" width="5" height="12" rx="2.5"/>
+</svg>
