@@ -36,8 +36,8 @@ select2.addEventListener('change', (e) => {
 
 const modal = document.querySelector('.map-modal');
 const close = modal.querySelector('.close');
-const gbi = { lat: -14.2097524, long: -42.7694645 };
-const bar = {}
+const gbi = { lat: -14.2097524, lgn: -42.7694645 };
+const bar = {lat: -12.1475489, lng: -44.9952351}
 
 localizationBtn.addEventListener('click', () => {
   modal.style.transform = 'scale(1)';
