@@ -1,5 +1,6 @@
 const select = document.getElementById('city');
 const whatsBtn = document.getElementById('whatsapp');
+const localizationBtn = document.getElementById('localization');
 
 select.addEventListener('change', (e) => {
   if (select.value != '') {
@@ -7,9 +8,14 @@ select.addEventListener('change', (e) => {
     whatsBtn.style.color = '#da7d21';
     whatsBtn.style.textDecoration = 'none';
     whatsBtn.style.pointerEvents = 'initial';
+    localizationBtn.style.color = '#da7d21';
+    localizationBtn.style.textDecoration = 'none';
+    localizationBtn.style.pointerEvents = 'initial';
   } else {
     whatsBtn.style.color = 'gray';
     whatsBtn.style.pointerEvents = 'none';
+    localizationBtn.style.color = 'gray';
+    localizationBtn.style.pointerEvents = 'none';
   }
 });
 
@@ -26,4 +32,17 @@ select2.addEventListener('change', (e) => {
     whatsBtn2.style.color = 'gray';
     whatsBtn2.style.pointerEvents = 'none';
   }
+});
+
+const modal = document.querySelector('.map-modal');
+const close = modal.querySelector('.close');
+const gbi = { lat: -14.2097524, long: -42.7694645 };
+const bar = {}
+
+localizationBtn.addEventListener('click', () => {
+  modal.style.transform = 'scale(1)';
+});
+
+close.addEventListener('click', () => {
+  modal.style.transform = 'scale(0)';
 });

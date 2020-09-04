@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -761,40 +762,40 @@ header .menu .stick-bottom {
   transition: all 0.5s ease;
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(1) .card:nth-of-type(1) .card-brand {
-  background-image: url("../assets/large_collegebound.png");
+  background-image: url("../assets/projetos/comercial-araguaia.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(1) .card:nth-of-type(2) .card-brand {
-  background-image: url("../assets/large_frack.png");
+  background-image: url("../assets/projetos/justiça-federal.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(1) .card:nth-of-type(1) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/comercial-araguaia-foto.jpeg");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(1) .card:nth-of-type(2) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/justica-federal-foto.jpeg");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(2) .card:nth-of-type(1) .card-brand {
-  background-image: url("../assets/large_fuelize.png");
+  background-image: url("../assets/projetos/residencial.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(2) .card:nth-of-type(2) .card-brand {
-  background-image: url("../assets/large_liquidpipeline_0.png");
+  background-image: url("../assets/projetos/hospital.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(2) .card:nth-of-type(1) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/residencial-foto.jpeg");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(2) .card:nth-of-type(2) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/hospital-do-rim-foto.jpeg");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(3) .card:nth-of-type(1) .card-brand {
-  background-image: url("../assets/large_oilpier_0.png");
+  background-image: url("../assets/projetos/prefeitura.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(3) .card:nth-of-type(2) .card-brand {
-  background-image: url("../assets/large_collegenation_0.png");
+  background-image: url("../assets/projetos/biscoito.png");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(3) .card:nth-of-type(1) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/prefeitura-guanambi-foto.jpeg");
 }
 .step-4 .bg-gradient .slider .step:nth-of-type(3) .card:nth-of-type(2) .card-photo {
-  background-image: url("../assets/case-1.jpg");
+  background-image: url("../assets/projetos/biscoito-conteudo.jpeg");
 }
 @media (min-width: 1025px) {
   .step-4 {
@@ -868,6 +869,7 @@ header .menu .stick-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .step-5 .bg-gradient .title {
   display: flex;
@@ -896,14 +898,14 @@ header .menu .stick-bottom {
 .step-5 .bg-gradient h3 {
   color: white;
   text-align: center;
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-weight: 500;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
 }
 .step-5 .bg-gradient .select {
-  margin-top: 5vh;
+  margin-top: 3vh;
   width: 70vw;
-  height: 6vh;
+  height: 5vh;
   border-radius: 50px;
   overflow: hidden;
   position: relative;
@@ -948,12 +950,12 @@ header .menu .stick-bottom {
   color: white;
   width: 80%;
   text-align: center;
-  margin-top: 5vh;
-  font-size: 5vw;
+  margin-top: 3vh;
+  font-size: 4vw;
 }
 .step-5 .bg-gradient a {
   width: 65vw;
-  height: 8vh;
+  height: 6vh;
   text-transform: uppercase;
   color: gray;
   border: none;
@@ -965,10 +967,59 @@ header .menu .stick-bottom {
   margin-top: 4vh;
   background-color: white;
   text-align: center;
-  line-height: 8vh;
+  line-height: 6vh;
   transition: all 0.5s linear;
   cursor: pointer;
   pointer-events: none;
+}
+.step-5 .bg-gradient #localization {
+  width: 50vw;
+}
+.step-5 .bg-gradient .map-modal {
+  position: absolute;
+  justify-self: center;
+  top: 2vh;
+  width: 85vw;
+  height: 60vh;
+  z-index: 999;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center 90%;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+.step-5 .bg-gradient .map-modal .close {
+  position: absolute;
+  right: 6vw;
+  top: 2.5vh;
+}
+.step-5 .bg-gradient .map-modal .close i {
+  font-size: 6vw;
+  color: #f9c138;
+}
+.step-5 .bg-gradient .map-modal #map {
+  height: 25vh;
+  width: 85%;
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  margin-top: 7vh;
+}
+.step-5 .bg-gradient .map-modal p {
+  text-align: center;
+  width: 100%;
+  color: darkorange;
+  margin-top: 0.6vh;
+}
+.step-5 .bg-gradient .map-modal p:nth-of-type(1) {
+  margin-top: 5vh;
 }
 @media (min-width: 1025px) {
   .step-5 {
@@ -1005,11 +1056,11 @@ header .menu .stick-bottom {
   }
   .step-5 .bg-gradient h3 {
     font-size: 2vw;
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
   .step-5 .bg-gradient .select {
     width: 20vw;
-    margin-top: 7vh;
+    margin-top: 4vh;
     border-radius: 50px;
   }
   .step-5 .bg-gradient .select select {
@@ -1026,12 +1077,35 @@ header .menu .stick-bottom {
   .step-5 .bg-gradient p {
     font-size: 1.5vw;
     width: 58%;
-    margin-top: 7vh;
+    margin-top: 4vh;
   }
   .step-5 .bg-gradient a {
     width: 22vw;
-    height: 7vh;
-    font-size: 1.4vw;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 1.2vw;
+    margin-top: 7vh;
+  }
+  .step-5 .bg-gradient #localization {
+    width: 15vw;
+  }
+  .step-5 .bg-gradient .map-modal {
+    width: 60vw;
+    height: 65vh;
+    top: 30vh;
+    transform-origin: center 75%;
+  }
+  .step-5 .bg-gradient .map-modal .close {
+    right: 2vw;
+    top: 2.5vh;
+  }
+  .step-5 .bg-gradient .map-modal .close i {
+    font-size: 2vw;
+  }
+  .step-5 .bg-gradient .map-modal #map {
+    height: 30vh;
+  }
+  .step-5 .bg-gradient .map-modal p:nth-of-type(1) {
     margin-top: 7vh;
   }
 }
