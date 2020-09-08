@@ -313,7 +313,7 @@
         </div>
 
 
-        <p>Envie uma foto da sua conta de energia para o nosso WhatsApp e um de nossos representantes irá prontamente atende-lo</p>
+        <p>Envie uma foto da sua conta de energia para o nosso WhatsApp e um de nossos representantes irá prontamente atendê-lo</p>
 
         <a target="_blank" id="whatsapp">ir para o WhatsApp &nbsp<i class="fab fa-whatsapp"></i> </a>
 
@@ -324,9 +324,10 @@
 
           <div id="map"></div>
 
-          <p>Av. Barão do Rio Branco, N 1972,</p>
-          <p>São Fransisco, Guanambi, Bahia,</p>
-          <p>46430-000</p>
+          <p class="logradouro"></p>
+          <p class="bairro"></p>
+          <p class="cep"></p>
+          <p></p>
         </div>
 
 
@@ -343,15 +344,7 @@
   <script src="./js/contact.js"></script>
   <script>
     // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var uluru = { lat: -14.2097524, lng: -42.7694645 };
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 18, center: uluru });
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({ position: uluru, map: map });
-    }
+
   </script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArnoDmizvy_HCpBM1Xt2thn91f_WxiYU0&callback=initMap">
   </script>
