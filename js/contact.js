@@ -100,7 +100,7 @@ let city = '';
 function initMap() {
   // The locations
   let gbi = { lat: -14.2097524, lng: -42.7694645 };
-  let bar = { lat: -12.1475489, lng: -44.9952351 };
+  let bar = { lat: -12.150653, lng: -44.9968553 };
   let vca = { lat: -14.8675967, lng: -40.8444244 };
 
   // The map
