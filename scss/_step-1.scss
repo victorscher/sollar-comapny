@@ -17,7 +17,7 @@
 
   div {
     width: 100%;
-    height: max-content;
+    height: 100vh;
     position: absolute;
     @include centralize;
 
@@ -46,7 +46,13 @@
       background-size: contain;
       width: 10vw;
       height: 10vw;
-      margin-top: 45vh;
+      position: absolute;
+      bottom: 25vh;
+      animation-name: up;
+      animation-timing-function: linear;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
     }
 
     @keyframes up {
