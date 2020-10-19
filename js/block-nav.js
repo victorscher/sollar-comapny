@@ -2,14 +2,13 @@
   //SELECTORS
   const main = document.querySelector('.main');
   const steps = main.querySelectorAll('section');
+  steps[0].style.zIndex = '999';
 
   if (window.innerWidth < 1025) {
     var navgator = document.querySelector('.navgator-mob');
   } else {
     var navgator = document.querySelector('.navgator-desk');
   }
-
-  console.log(navgator);
 
   const pos1 = navgator.querySelector('.screen-1');
   const pos2 = navgator.querySelector('.screen-2');
@@ -82,21 +81,19 @@
     }
   });
 
-  main.addEventListener('wheel', function (e) {
-    if (e.deltaY < 0) {
-      scdir = 'down';
-    } else if (e.deltaY > 0) {
-      scdir = 'up';
-    }
-    e.stopPropagation();
-  });
+  window.addEventListener('load', () => {
+    main.addEventListener('wheel', function (e) {
+      if (e.deltaY < 0) {
+        scdir = 'down';
+      } else if (e.deltaY > 0) {
+        scdir = 'up';
+      }
+      e.stopPropagation();
+    });
 
-  main.addEventListener('wheel', function () {
-    _scrollY();
-  });
-
-  window.addEventListener('load', function () {
-    position();
+    main.addEventListener('wheel', function () {
+      _scrollY();
+    });
   });
 
   //FUNCTIONS
@@ -119,11 +116,18 @@
         }
       }
     });
+  }
 
-    steps.forEach((step) => {
+  position();
+
+  window.addEventListener('load', () => {
+    steps.forEach((step, index) => {
+      if (index != 0) {
+        step.style.opacity = '1';
+      }
       step.style.transition = 'all 1s ease';
     });
-  }
+  });
 
   function swipeNext() {
     if (curPosition < 4) {

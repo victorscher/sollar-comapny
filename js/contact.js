@@ -18,7 +18,7 @@ select.addEventListener('change', (e) => {
     localizationBtn.style.pointerEvents = 'none';
   }
 
-  if (select.value == '557734512150') {
+  if (select.value == '5577998075037') {
     city = 'gbi';
     logradouro.textContent = gbi.logradouro;
     bairro.textContent = gbi.bairro;
@@ -44,7 +44,7 @@ const whatsBtn2 = document.getElementById('whatsapp2');
 
 select2.addEventListener('change', (e) => {
   if (select2.value != '') {
-    whatsBtn2.href = `https://api.whatsapp.com/send?phone=${select2.value}`;
+    whatsBtn2.textContent = `${select2.value}`;
     whatsBtn2.style.color = '#31709e';
     whatsBtn2.style.textDecoration = 'none';
     whatsBtn2.style.pointerEvents = 'initial';

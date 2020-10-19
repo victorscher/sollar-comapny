@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   position: absolute;
+  opacity: 0;
 
   .bg-image {
     height: 20vh;
@@ -113,7 +114,7 @@
 
         .card:nth-of-type(2) {
           .card-brand {
-            background-image: url('../assets/projetos/justiça-federal.png');
+            background-image: url('../assets/projetos/justica-federal.png');
           }
         }
 
